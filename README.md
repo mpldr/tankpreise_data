@@ -1,29 +1,29 @@
 # Intro
-Historische Benzinpreisdaten mit Änderungen.
+Historische Benzinpreisdaten in Deutschland als CSV-Dateien.
 
 # Preise
-Im Verzeichnis prices
+Im Verzeichnis _prices_ sind alle Preisänderungen aller Tankstellen in jeweils einer CSV-Datei pro Tag protokolliert.
+Felder im CSV-Header:
+`date,station_uuid,diesel,e5,e10,dieselchange,e5change,e10change`
+Bedeutung:
+|Feld        |Bedeutung                                      |
+|------------|-----------------------------------------------|
+|date        |Änderungszeitpunkt                             |
+|station_uuid|UUID der Tankstelle aus `stations`             |
+|diesel      |Preis Diesel                                   |
+|e5          |Preis Super E5                                 |
+|e10         |Preis Super E10                                |
+|dieselchange|0=keine Änderung, 1=Änderung, 2=Entfernt, 3=Neu|
+|e5change    |0=keine Änderung, 1=Änderung, 2=Entfernt, 3=Neu|
+|e10change   |0=keine Änderung, 1=Änderung, 2=Entfernt, 3=Neu|
+
 
 # Tankstellen
-Im Verzeichnis stations
+Im Verzeichnis _stations_ sind alle Tankstellen in einer CSV-Datei aufgeführt
 
 # Zuordnung
-Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird dies UUID referenziert.
+Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird diese UUID referenziert.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
-
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Lizenz der Datensammlung
+<https://creativecommons.org/licenses/by-nc-sa/4.0/>
+Für kommerzielle Nutzung stellen wir die Daten unter anderer Lizenz zur Verfügung. Nachfrage unter <info@tankerkoenig.de>
