@@ -1,5 +1,8 @@
 # Intro
 Historische Benzinpreisdaten in Deutschland als CSV-Dateien.
+Die Preise werden von [Tankerkönig](<https://www.tankerkoenig.de>) als Datensammlung unter einer Creativecommons-Lizenz zur Verfügung gestellt.
+[Tankerkönig](<https://www.tankerkoenig.de>) bietet ein Echtzeit-Benzinpreis-API als REST-Service an, der leicht in Apps, Websites und Enterprise-Systeme integriert werden kann.
+
 
 # Preise
 Im Verzeichnis _prices_ sind alle Preisänderungen aller Tankstellen in jeweils einer CSV-Datei pro Tag protokolliert.
