@@ -1,5 +1,14 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Intro
+Historische Benzinpreisdaten mit Änderungen.
+
+# Preise
+Im Verzeichnis prices
+
+# Tankstellen
+Im Verzeichnis stations
+
+# Zuordnung
+Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird dies UUID referenziert.
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
