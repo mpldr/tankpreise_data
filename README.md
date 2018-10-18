@@ -1,14 +1,35 @@
 # Intro
 Historische Benzinpreisdaten in Deutschland als CSV-Dateien.
 Die Preise werden von [Tankerkönig](<https://www.tankerkoenig.de>) als Datensammlung unter einer Creativecommons-Lizenz zur Verfügung gestellt.
-[Tankerkönig](<https://www.tankerkoenig.de>) bietet ein Echtzeit-Benzinpreis-API als REST-Service an, der leicht in Apps, Websites und Enterprise-Systeme integriert werden kann.
+## Tankerkönig
+[Tankerkönig](<https://www.tankerkoenig.de>) bietet auch ein Echtzeit-Benzinpreis-API als REST-Service an, der leicht in Apps, Websites und Enterprise-Systeme integriert werden kann.
 
+# Daten holen per Download oder git
+Das gesamte Repository ist ausgepackt knapp 20 GB groß und damit etwas unhandlich. 
+## Download
+Wer die Daten einmalig benötigt, lädt sie am einfachsten über die Weboberfläche runter.
+## git clone
+Da jede Nacht die Daten des letzten Tages dazukommen, ist ein täglicher Download ineffizient. Besser ist es das git-Repository einmalig zu clonen und dann jeden Tag mit `git pull` upzudaten.
+
+Von der Kommandozeile:
+
+`git clone https://tankerkoenig@dev.azure.com/tankerkoenig/tankerkoenig-data/_git/tankerkoenig-data`
+
+die tägichen Updates holt man dann mit
+
+`git pull`
+
+Wenn man `git pull` täglich per cron-job ausführt, hat man immer alle aktuellen Daten da.
 
 # Preise
 Im Verzeichnis _prices_ sind alle Preisänderungen aller Tankstellen in jeweils einer CSV-Datei pro Tag protokolliert.
+
 Felder im CSV-Header:
+
 `date,station_uuid,diesel,e5,e10,dieselchange,e5change,e10change`
-Bedeutung:
+
+Bedeutung der Felder:
+
 |Feld        |Bedeutung                                      |
 |------------|-----------------------------------------------|
 |date        |Änderungszeitpunkt                             |
@@ -22,7 +43,24 @@ Bedeutung:
 
 
 # Tankstellen
-Im Verzeichnis _stations_ sind alle Tankstellen in einer CSV-Datei aufgeführt
+Im Verzeichnis _stations_ sind alle Tankstellen in einer CSV-Datei aufgeführt. 
+
+Felder im CSV-Header:
+
+`uuid,name,brand,street,house_number,post_code,city,latitude,longitude`
+
+Bedeutung:
+
+|Feld        |Bedeutung                                      |
+|------------|-----------------------------------------------|
+|uuid        |UUID der Tankstelle, matcht mit den Preisen    |
+|name        |Tankstellenname                                |
+|brand       |Marke                                          |
+|street      |Straße                                         |
+|post_code   |Postleitzahl                                   |
+|city        |Stadt                                          |
+|latitude    |geogr. Breite                                  |
+|lobgitude   |geogr. Länge                                   |
 
 # Zuordnung
 Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird diese UUID referenziert.
