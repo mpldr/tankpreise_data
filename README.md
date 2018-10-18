@@ -21,6 +21,9 @@ die tägichen Updates holt man dann mit
 
 Wenn man `git pull` täglich per cron-job ausführt, hat man immer alle aktuellen Daten da.
 
+# Feedback
+Wir freuen uns über jede Rückmeldung zur Verwendung der Daten. Wir linken auch gerne auf Projekte, welche diese Daten verwenden. Auch Verbeserungsvorschläge oder anderes Feedback sind gern gesehen, wir sind gespannt, was man mit den Daten machen kann!
+
 # Preise
 Im Verzeichnis _prices_ sind alle Preisänderungen aller Tankstellen in jeweils einer CSV-Datei pro Tag protokolliert.
 
