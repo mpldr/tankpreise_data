@@ -47,6 +47,7 @@ Bedeutung der Felder:
 
 # Tankstellen
 Im Verzeichnis _stations_ sind alle Tankstellen in einer CSV-Datei aufgeführt. 
+Da sich die Tankstellenliste ändert, wird sie täglich in ein Verzeichnis stations/JAHR/MONAT/ exportiert
 
 Felder im CSV-Header:
 
@@ -54,16 +55,18 @@ Felder im CSV-Header:
 
 Bedeutung:
 
-|Feld        |Bedeutung                                      |
-|------------|-----------------------------------------------|
-|uuid        |UUID der Tankstelle, matcht mit den Preisen    |
-|name        |Tankstellenname                                |
-|brand       |Marke                                          |
-|street      |Straße                                         |
-|post_code   |Postleitzahl                                   |
-|city        |Stadt                                          |
-|latitude    |geogr. Breite                                  |
-|lobgitude   |geogr. Länge                                   |
+|Feld             |Bedeutung                                      |
+|-----------------|-----------------------------------------------|
+|uuid             |UUID der Tankstelle, matcht mit den Preisen    |
+|name             |Tankstellenname                                |
+|brand            |Marke                                          |
+|street           |Straße                                         |
+|post_code        |Postleitzahl                                   |
+|city             |Stadt                                          |
+|latitude         |geogr. Breite                                  |
+|longitude        |geogr. Länge                                   |
+|first_active     |erstes Auftauchen                              |
+|openingtimes_json|Öffnungszeiten als JSON                        |
 
 # Zuordnung
 Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird diese UUID referenziert.
