@@ -68,6 +68,25 @@ Bedeutung:
 |first_active     |erstes Auftauchen                              |
 |openingtimes_json|Öffnungszeiten als JSON                        |
 
+# openingtimes_json
+applicable_days: die Tage, an denen diese Öffnungszeit gültig ist, binär kodiert - ein Byte.
+
+|Wert             |Bedeutung                                      |
+|-----------------|-----------------------------------------------|
+|1|Montag|
+|2|Dienstag|
+|4|Mittwoch|
+|8|Donnerstag|
+|16|Freitag|
+|32|Samstag|
+|64|Sonntag|
+|128|Feiertag|
+
+Bsp:
+* Montag - Freitag = 31 (1 + 2 + 4 + 8 + 16)
+* Sa/So = 96 (32 + 64)
+* Feiertags = 128
+
 # Zuordnung
 Jede Tankstelle ist eindeutig über eine UUID identifiziert. In den Preisdaten wird diese UUID referenziert.
 
