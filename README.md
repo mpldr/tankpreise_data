@@ -5,7 +5,7 @@ Die Preise werden von [Tankerkönig](<https://www.tankerkoenig.de>) als Datensam
 [Tankerkönig](<https://www.tankerkoenig.de>) bietet auch ein Echtzeit-Benzinpreis-API als REST-Service an, der leicht in Apps, Websites und Enterprise-Systeme integriert werden kann.
 
 # Daten holen per Download oder git
-Das gesamte Repository ist ausgepackt knapp 20 GB groß und damit etwas unhandlich. 
+Das gesamte Repository ist ausgepackt über 50 GB groß und damit etwas unhandlich. 
 ## Download
 Wer die Daten einmalig benötigt, lädt sie am einfachsten über die Weboberfläche runter.
 ## git clone
