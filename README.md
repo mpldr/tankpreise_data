@@ -15,6 +15,8 @@ Von der Kommandozeile:
 
 `git clone https://tankerkoenig@dev.azure.com/tankerkoenig/tankerkoenig-data/_git/tankerkoenig-data`
 
+Falls es timeout-Fehler gibt, kann man auch `git clone --depth 1 https://tankerkoenig@dev.azure.com/tankerkoenig/tankerkoenig-data/_git/tankerkoenig-data` probieren, das clont die history nicht mit und dauert nicht so lange.
+
 die tägichen Updates holt man dann mit
 
 `git pull`
